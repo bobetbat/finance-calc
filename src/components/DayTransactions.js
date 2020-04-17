@@ -1,16 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Calendar } from './Calendar'
 
 
-class MainContainer extends React.Component {
+class DayTransactions extends React.Component {
   render() {
     return (
       <div className="mainContainer">
-        <Calendar />
+        d
       </div>
     )
   }
 }
 
-export default MainContainer
+export default DayTransactions
