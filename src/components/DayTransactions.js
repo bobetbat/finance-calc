@@ -6,7 +6,7 @@ class DayTransactions extends React.Component {
   render() {
     return (
       <div className="mainContainer">
-        d
+        
       </div>
     )
   }

@@ -26,12 +26,13 @@ const Button = styled.div`
 
 const Body = styled.div`
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 3rem 1fr 1fr 1fr 1fr 1fr 1fr;
   flex-wrap: wrap;
 `;
 
 const Day = styled.div`
-  width: 13.33%;
   margin: 0.3rem;
   height: 7rem;
   display: flex;
@@ -58,7 +59,6 @@ const Day = styled.div`
 `;
 
 const WeekDay = styled.div`
-  width: 13.33%;
   margin: 0.4rem;
   height: 3rem;
   display: flex;

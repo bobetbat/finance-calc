@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 18rem auto;
   grid-template-rows: 6rem auto;
 }
 
@@ -63,7 +63,7 @@
 .mainAccount {
   color: #61dafb;
   margin: 0.3rem 1rem;
-  width: 90%;
+  width: 15rem;
   height: 6rem;
   border: solid 2px #61dafb;
 }
