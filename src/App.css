@@ -2,7 +2,7 @@
   text-align: center;
   display: grid;
   grid-template-columns: 18rem auto;
-  grid-template-rows: 6rem auto;
+  grid-template-rows: 100vh;
 }
 
 .App-logo {

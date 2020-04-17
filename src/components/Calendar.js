@@ -5,7 +5,9 @@ import DayTransactions from './DayTransactions';
 
 const Frame = styled.div`
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
   border: 1px solid lightgrey;
   box-shadow: 2px 2px 2px #eee;
   background-color: #2e3035;
@@ -17,7 +19,8 @@ const Header = styled.div`
   padding: 10px 10px 5px 10px;
   display: flex;
   justify-content: space-between;
-  background-color: #f5f6fa;
+  background-color: #2e3035;
+  color: #61dafb;
 `;
 
 const Button = styled.div`
@@ -25,11 +28,13 @@ const Button = styled.div`
 `;
 
 const Body = styled.div`
-  width: 100%;
   display: grid;
+  width:100%;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 3rem 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1/2fr 1fr 1fr 1fr 1fr 1fr 1/2fr;
   flex-wrap: wrap;
+  background-color: #2e3035;
+  color: #61dafb;
 `;
 
 const Day = styled.div`
@@ -59,7 +64,6 @@ const Day = styled.div`
 `;
 
 const WeekDay = styled.div`
-  margin: 0.4rem;
   height: 3rem;
   display: flex;
   flex-direction:row;
