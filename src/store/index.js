@@ -1,9 +1,9 @@
 import { types } from 'mobx-state-tree'
 
-import Transactions from './Transaction'
+import Account from './Account'
 
 const Store = types.model('Store', {
-    transactions: types.optional(Transactions, Transactions.create({})),
+    account: types.optional(Account, Account.create({})),
     // ui: types.optional(UIStore, UIStore.create({})),
     // api: types.optional(ApiStore, ApiStore.create({}))
 })
