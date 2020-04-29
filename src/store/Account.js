@@ -1,8 +1,5 @@
 import { types } from 'mobx-state-tree'
-
-const Time = types.model('Time', {
-  current: types.optional(types.number, 0),
-})
+import * as dataTest from './dataTest'
 
 const Transaction = types
   .model('Transaction', {
@@ -10,7 +7,7 @@ const Transaction = types
     title: types.optional(types.string, ''),
     discription: types.optional(types.string, ''),
     amount: types.optional(types.number, 0),
-    time: types.optional(Time, Time.create({})),
+    date: types.optional(types.number, 0),
     executed: types.optional(types.boolean, false),
     addedToTemplate: types.optional(types.boolean, false),
   })
@@ -23,8 +20,19 @@ const Account = types
     transactions: types.optional(types.array(Transaction), []),
   })
   .actions(self => ({
-    setAllTransactions(data) {
-      self.transactions = data.map(el => Transaction.create(el))
+    setAccount() {
+      const { id, actualBalance, estimatedBalance } = dataTest.account
+      self.id = id
+      self.actualBalance = actualBalance
+      self.estimatedBalance = estimatedBalance
+    },
+    setAllTransactions() {
+      const { transactions } = dataTest
+      console.log(transactions,'transact');
+      self.transactions = transactions.map(el => Transaction.create(el))
+      console.log(transactions,'transactstore');
+      console.log(self.transactions,'transactstore');
+
     }
   }))
   .views(self => ({

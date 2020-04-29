@@ -25,7 +25,7 @@ class AccountList extends React.Component {
       <div className="accountList">
         <MainAccount />
         {accounts.map( account => (
-          <div className="accountSingle">
+          <div className="accountSingle" key={account.title}>
             <div>
               {account.title}
             </div>

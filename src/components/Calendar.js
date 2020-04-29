@@ -8,6 +8,7 @@ const Frame = styled.div`
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: 3rem 1fr;
   border: 1px solid lightgrey;
   box-shadow: 2px 2px 2px #eee;
   background-color: #2e3035;
@@ -129,6 +130,7 @@ export function Calendar() {
                 onClick={() => setDate(new Date(year, month, d))}//TODO set date to store 
               >
                 {d > 0 ? d : ''}
+                
                 <DayTransactions />
               </Day>
             );
