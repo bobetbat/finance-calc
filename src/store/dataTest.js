@@ -14,5 +14,23 @@ export const transactions = [
     date: 1588096810,
     executed: false,
     addedToTemplate: false,
+	},
+	{
+		id: 'id22223222',
+    title: 'transactionTitle',
+    discription: 'transactionDiscription',
+    amount: 10,
+    date: 1588096810,
+    executed: false,
+    addedToTemplate: false,
+	},
+	{
+		id: 'id22222422',
+    title: 'transactionTitle',
+    discription: 'transactionDiscription',
+    amount: 10,
+    date: 1588096810,
+    executed: false,
+    addedToTemplate: false,
 	}
 ]
