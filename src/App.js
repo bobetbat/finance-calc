@@ -3,6 +3,7 @@ import './App.css';
 import { inject, observer } from 'mobx-react'
 import { toJS } from 'mobx'
 import AccountList from './components/AccountList'
+import Calendar from './components/Calendar'
 import MainContainer from './components/MainContainer'
 
 @inject('Store')
@@ -20,7 +21,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <AccountList />
-        <MainContainer />
+        <Calendar account={this.props.Store.account}/>
       </div>
     );
   }
